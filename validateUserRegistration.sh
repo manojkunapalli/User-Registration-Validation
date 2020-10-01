@@ -4,12 +4,15 @@ echo "welcome to User Registration system"
 firstNamePattern="^[A-Z]{3,}"
 lastNamePattern="^[A-Z]{3,}"
 mailPattern="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$"
+mobilePattern="^[0-9]{2}[ ]{1}[1-9]{1}[0-9]{9}$"
 
 read -p "enter First Name = " firstName
 echo -e
 read -p "enter Last Name = " lastName
 echo -e
 read -p "enter mail id = " email
+echo -e
+read -p "enter mobile number = " mobile
 
 if [[ $firstName =~ $firstNamePattern ]]
 then
@@ -30,4 +33,11 @@ then
 	echo "email is valid"
 else
 	echo "email is not a valid"
+fi
+
+if [[ $mobile =~ $mobilePattern ]]
+then
+	echo "mobile number is valid"
+else
+	echo "mobile number is not valid"
 fi
