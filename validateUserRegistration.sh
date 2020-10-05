@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "welcome to User Registration system"
 
-firstNamePattern="^[A-Z]{3,}"
-lastNamePattern="^[A-Z]{3,}"
+firstNamePattern="^[A-Za-z]{3,}"
+lastNamePattern="^[A-Za-z]{3,}"
 mailPattern="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$"
-mobilePattern="^[0-9]{2}[ ]{1}[1-9]{1}[0-9]{9}$"
-passwordPattern="^[a-zA-z]{8,}[A-Z]{1,}[0-9]{1,}[.,!@#$&*-]{1}"
+mobilePattern="^[91]{1}[ ]{1}[6-9]{1}[0-9]{9}$"
+passwordPattern="^[a-zA-Z0-9.,!@#$&*-]{8,}$"
 
 read -p "enter First Name = " firstName
 echo -e
